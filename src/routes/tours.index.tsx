@@ -3,12 +3,11 @@ import { ToursPage } from "@/components/pages";
 import { SiteLayout } from "@/components/site";
 
 export const Route = createFileRoute("/tours/")({
-  validateSearch: (s: Record<string, unknown>) => ({
-    destination: String(s.destination ?? ""),
-    budget: String(s.budget ?? ""),
-    month: String(s.month ?? ""),
-    travellers: String(s.travellers ?? ""),
-  }),
+  validateSearch: (s: Record<string, unknown>): { destination?: string; budget?: string; month?: string; travellers?: string } => {
+    const out: { destination?: string; budget?: string; month?: string; travellers?: string } = {};
+    for (const k of ["destination", "budget", "month", "travellers"] as const) if (typeof s[k] === "string" && s[k]) out[k] = s[k] as string;
+    return out;
+  },
   head: () => ({
     meta: [
       { title: "Tours & Packages — Bandhan Tours" },
