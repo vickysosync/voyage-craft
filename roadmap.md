@@ -1,0 +1,3 @@
+- [ ] Build the public travel site with all requested pages, photography, navigation, and frontend interactions.
+- [ ] Build session-based mock admin login, management views, and connected public content.
+- [ ] Verify desktop/mobile presentation and main public/admin workflows.

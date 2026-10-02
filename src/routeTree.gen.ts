@@ -10,33 +10,259 @@
 
 import { Route as rootRouteImport } from './routes/__root'
 import { Route as IndexRouteImport } from './routes/index'
+import { Route as AboutRouteImport } from './routes/about'
+import { Route as ContactRouteImport } from './routes/contact'
+import { Route as CorporateMiceRouteImport } from './routes/corporate-mice'
+import { Route as GalleryRouteImport } from './routes/gallery'
+import { Route as GroupDeparturesRouteImport } from './routes/group-departures'
+import { Route as LoginRouteImport } from './routes/login'
+import { Route as PlanYourTripRouteImport } from './routes/plan-your-trip'
+import { Route as ReviewsRouteImport } from './routes/reviews'
+import { Route as AdminDashboardRouteImport } from './routes/admin.dashboard'
+import { Route as AdminLoginRouteImport } from './routes/admin.login'
+import { Route as DestinationsIndexRouteImport } from './routes/destinations.index'
+import { Route as DestinationsDestinationRouteImport } from './routes/destinations.$destination'
+import { Route as DestinationsDomesticRouteImport } from './routes/destinations.domestic'
+import { Route as DestinationsInternationalRouteImport } from './routes/destinations.international'
+import { Route as DestinationsNorthEastRouteImport } from './routes/destinations.north-east'
+import { Route as ToursIndexRouteImport } from './routes/tours.index'
+import { Route as ToursTourRouteImport } from './routes/tours.$tour'
 
 const IndexRoute = IndexRouteImport.update({
   id: '/',
   path: '/',
   getParentRoute: () => rootRouteImport,
 } as any)
+const AboutRoute = AboutRouteImport.update({
+  id: '/about',
+  path: '/about',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ContactRoute = ContactRouteImport.update({
+  id: '/contact',
+  path: '/contact',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const CorporateMiceRoute = CorporateMiceRouteImport.update({
+  id: '/corporate-mice',
+  path: '/corporate-mice',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const GalleryRoute = GalleryRouteImport.update({
+  id: '/gallery',
+  path: '/gallery',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const GroupDeparturesRoute = GroupDeparturesRouteImport.update({
+  id: '/group-departures',
+  path: '/group-departures',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const LoginRoute = LoginRouteImport.update({
+  id: '/login',
+  path: '/login',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const PlanYourTripRoute = PlanYourTripRouteImport.update({
+  id: '/plan-your-trip',
+  path: '/plan-your-trip',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ReviewsRoute = ReviewsRouteImport.update({
+  id: '/reviews',
+  path: '/reviews',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const AdminDashboardRoute = AdminDashboardRouteImport.update({
+  id: '/admin/dashboard',
+  path: '/admin/dashboard',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const AdminLoginRoute = AdminLoginRouteImport.update({
+  id: '/admin/login',
+  path: '/admin/login',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const DestinationsIndexRoute = DestinationsIndexRouteImport.update({
+  id: '/destinations/',
+  path: '/destinations/',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const DestinationsDestinationRoute = DestinationsDestinationRouteImport.update({
+  id: '/destinations/$destination',
+  path: '/destinations/$destination',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const DestinationsDomesticRoute = DestinationsDomesticRouteImport.update({
+  id: '/destinations/domestic',
+  path: '/destinations/domestic',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const DestinationsInternationalRoute =
+  DestinationsInternationalRouteImport.update({
+    id: '/destinations/international',
+    path: '/destinations/international',
+    getParentRoute: () => rootRouteImport,
+  } as any)
+const DestinationsNorthEastRoute = DestinationsNorthEastRouteImport.update({
+  id: '/destinations/north-east',
+  path: '/destinations/north-east',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ToursIndexRoute = ToursIndexRouteImport.update({
+  id: '/tours/',
+  path: '/tours/',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ToursTourRoute = ToursTourRouteImport.update({
+  id: '/tours/$tour',
+  path: '/tours/$tour',
+  getParentRoute: () => rootRouteImport,
+} as any)
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
+  '/about': typeof AboutRoute
+  '/contact': typeof ContactRoute
+  '/corporate-mice': typeof CorporateMiceRoute
+  '/gallery': typeof GalleryRoute
+  '/group-departures': typeof GroupDeparturesRoute
+  '/login': typeof LoginRoute
+  '/plan-your-trip': typeof PlanYourTripRoute
+  '/reviews': typeof ReviewsRoute
+  '/admin/dashboard': typeof AdminDashboardRoute
+  '/admin/login': typeof AdminLoginRoute
+  '/destinations/$destination': typeof DestinationsDestinationRoute
+  '/destinations/domestic': typeof DestinationsDomesticRoute
+  '/destinations/international': typeof DestinationsInternationalRoute
+  '/destinations/north-east': typeof DestinationsNorthEastRoute
+  '/tours/$tour': typeof ToursTourRoute
+  '/destinations/': typeof DestinationsIndexRoute
+  '/tours/': typeof ToursIndexRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
+  '/about': typeof AboutRoute
+  '/contact': typeof ContactRoute
+  '/corporate-mice': typeof CorporateMiceRoute
+  '/gallery': typeof GalleryRoute
+  '/group-departures': typeof GroupDeparturesRoute
+  '/login': typeof LoginRoute
+  '/plan-your-trip': typeof PlanYourTripRoute
+  '/reviews': typeof ReviewsRoute
+  '/admin/dashboard': typeof AdminDashboardRoute
+  '/admin/login': typeof AdminLoginRoute
+  '/destinations/$destination': typeof DestinationsDestinationRoute
+  '/destinations/domestic': typeof DestinationsDomesticRoute
+  '/destinations/international': typeof DestinationsInternationalRoute
+  '/destinations/north-east': typeof DestinationsNorthEastRoute
+  '/tours/$tour': typeof ToursTourRoute
+  '/destinations': typeof DestinationsIndexRoute
+  '/tours': typeof ToursIndexRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
+  '/about': typeof AboutRoute
+  '/contact': typeof ContactRoute
+  '/corporate-mice': typeof CorporateMiceRoute
+  '/gallery': typeof GalleryRoute
+  '/group-departures': typeof GroupDeparturesRoute
+  '/login': typeof LoginRoute
+  '/plan-your-trip': typeof PlanYourTripRoute
+  '/reviews': typeof ReviewsRoute
+  '/admin/dashboard': typeof AdminDashboardRoute
+  '/admin/login': typeof AdminLoginRoute
+  '/destinations/$destination': typeof DestinationsDestinationRoute
+  '/destinations/domestic': typeof DestinationsDomesticRoute
+  '/destinations/international': typeof DestinationsInternationalRoute
+  '/destinations/north-east': typeof DestinationsNorthEastRoute
+  '/tours/$tour': typeof ToursTourRoute
+  '/destinations/': typeof DestinationsIndexRoute
+  '/tours/': typeof ToursIndexRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
-  fullPaths: '/'
+  fullPaths:
+    | '/'
+    | '/about'
+    | '/contact'
+    | '/corporate-mice'
+    | '/gallery'
+    | '/group-departures'
+    | '/login'
+    | '/plan-your-trip'
+    | '/reviews'
+    | '/admin/dashboard'
+    | '/admin/login'
+    | '/destinations/$destination'
+    | '/destinations/domestic'
+    | '/destinations/international'
+    | '/destinations/north-east'
+    | '/tours/$tour'
+    | '/destinations/'
+    | '/tours/'
   fileRoutesByTo: FileRoutesByTo
-  to: '/'
-  id: '__root__' | '/'
+  to:
+    | '/'
+    | '/about'
+    | '/contact'
+    | '/corporate-mice'
+    | '/gallery'
+    | '/group-departures'
+    | '/login'
+    | '/plan-your-trip'
+    | '/reviews'
+    | '/admin/dashboard'
+    | '/admin/login'
+    | '/destinations/$destination'
+    | '/destinations/domestic'
+    | '/destinations/international'
+    | '/destinations/north-east'
+    | '/tours/$tour'
+    | '/destinations'
+    | '/tours'
+  id:
+    | '__root__'
+    | '/'
+    | '/about'
+    | '/contact'
+    | '/corporate-mice'
+    | '/gallery'
+    | '/group-departures'
+    | '/login'
+    | '/plan-your-trip'
+    | '/reviews'
+    | '/admin/dashboard'
+    | '/admin/login'
+    | '/destinations/$destination'
+    | '/destinations/domestic'
+    | '/destinations/international'
+    | '/destinations/north-east'
+    | '/tours/$tour'
+    | '/destinations/'
+    | '/tours/'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
+  AboutRoute: typeof AboutRoute
+  ContactRoute: typeof ContactRoute
+  CorporateMiceRoute: typeof CorporateMiceRoute
+  GalleryRoute: typeof GalleryRoute
+  GroupDeparturesRoute: typeof GroupDeparturesRoute
+  LoginRoute: typeof LoginRoute
+  PlanYourTripRoute: typeof PlanYourTripRoute
+  ReviewsRoute: typeof ReviewsRoute
+  AdminDashboardRoute: typeof AdminDashboardRoute
+  AdminLoginRoute: typeof AdminLoginRoute
+  DestinationsDestinationRoute: typeof DestinationsDestinationRoute
+  DestinationsDomesticRoute: typeof DestinationsDomesticRoute
+  DestinationsInternationalRoute: typeof DestinationsInternationalRoute
+  DestinationsNorthEastRoute: typeof DestinationsNorthEastRoute
+  ToursTourRoute: typeof ToursTourRoute
+  DestinationsIndexRoute: typeof DestinationsIndexRoute
+  ToursIndexRoute: typeof ToursIndexRoute
 }
 
 declare module '@tanstack/react-router' {
@@ -48,11 +274,147 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof IndexRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/about': {
+      id: '/about'
+      path: '/about'
+      fullPath: '/about'
+      preLoaderRoute: typeof AboutRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/contact': {
+      id: '/contact'
+      path: '/contact'
+      fullPath: '/contact'
+      preLoaderRoute: typeof ContactRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/corporate-mice': {
+      id: '/corporate-mice'
+      path: '/corporate-mice'
+      fullPath: '/corporate-mice'
+      preLoaderRoute: typeof CorporateMiceRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/gallery': {
+      id: '/gallery'
+      path: '/gallery'
+      fullPath: '/gallery'
+      preLoaderRoute: typeof GalleryRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/group-departures': {
+      id: '/group-departures'
+      path: '/group-departures'
+      fullPath: '/group-departures'
+      preLoaderRoute: typeof GroupDeparturesRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/login': {
+      id: '/login'
+      path: '/login'
+      fullPath: '/login'
+      preLoaderRoute: typeof LoginRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/plan-your-trip': {
+      id: '/plan-your-trip'
+      path: '/plan-your-trip'
+      fullPath: '/plan-your-trip'
+      preLoaderRoute: typeof PlanYourTripRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/reviews': {
+      id: '/reviews'
+      path: '/reviews'
+      fullPath: '/reviews'
+      preLoaderRoute: typeof ReviewsRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/admin/dashboard': {
+      id: '/admin/dashboard'
+      path: '/admin/dashboard'
+      fullPath: '/admin/dashboard'
+      preLoaderRoute: typeof AdminDashboardRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/admin/login': {
+      id: '/admin/login'
+      path: '/admin/login'
+      fullPath: '/admin/login'
+      preLoaderRoute: typeof AdminLoginRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/destinations/': {
+      id: '/destinations/'
+      path: '/destinations'
+      fullPath: '/destinations/'
+      preLoaderRoute: typeof DestinationsIndexRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/destinations/$destination': {
+      id: '/destinations/$destination'
+      path: '/destinations/$destination'
+      fullPath: '/destinations/$destination'
+      preLoaderRoute: typeof DestinationsDestinationRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/destinations/domestic': {
+      id: '/destinations/domestic'
+      path: '/destinations/domestic'
+      fullPath: '/destinations/domestic'
+      preLoaderRoute: typeof DestinationsDomesticRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/destinations/international': {
+      id: '/destinations/international'
+      path: '/destinations/international'
+      fullPath: '/destinations/international'
+      preLoaderRoute: typeof DestinationsInternationalRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/destinations/north-east': {
+      id: '/destinations/north-east'
+      path: '/destinations/north-east'
+      fullPath: '/destinations/north-east'
+      preLoaderRoute: typeof DestinationsNorthEastRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/tours/': {
+      id: '/tours/'
+      path: '/tours'
+      fullPath: '/tours/'
+      preLoaderRoute: typeof ToursIndexRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/tours/$tour': {
+      id: '/tours/$tour'
+      path: '/tours/$tour'
+      fullPath: '/tours/$tour'
+      preLoaderRoute: typeof ToursTourRouteImport
+      parentRoute: typeof rootRouteImport
+    }
   }
 }
 
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
+  AboutRoute: AboutRoute,
+  ContactRoute: ContactRoute,
+  CorporateMiceRoute: CorporateMiceRoute,
+  GalleryRoute: GalleryRoute,
+  GroupDeparturesRoute: GroupDeparturesRoute,
+  LoginRoute: LoginRoute,
+  PlanYourTripRoute: PlanYourTripRoute,
+  ReviewsRoute: ReviewsRoute,
+  AdminDashboardRoute: AdminDashboardRoute,
+  AdminLoginRoute: AdminLoginRoute,
+  DestinationsDestinationRoute: DestinationsDestinationRoute,
+  DestinationsDomesticRoute: DestinationsDomesticRoute,
+  DestinationsInternationalRoute: DestinationsInternationalRoute,
+  DestinationsNorthEastRoute: DestinationsNorthEastRoute,
+  ToursTourRoute: ToursTourRoute,
+  DestinationsIndexRoute: DestinationsIndexRoute,
+  ToursIndexRoute: ToursIndexRoute,
 }
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)
